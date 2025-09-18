@@ -1,0 +1,47 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - ask_symptoms
+  - ask_vaccination
+  - ask_disease_info
+  - emergency
+  - set_language
+
+entities:
+  - disease
+  - symptom
+  - age
+  - location
+  - language
+
+slots:
+
+  user_language:
+   type: text
+   initial_value: "english"
+  user_age:
+   type: float
+   initial_value: null
+  user_location:
+   type: text
+   initial_value: null
+
+responses:
+
+utter_greet:
+- text: "Hello! I'm your health desistant. How can I help you today?"
+- text: "नमस्ते। मैं आपका स्वास्थ्य सहायक हूँ। आज मैं आपकी कैसे मदद कर सकता हूँ?"
+utter_goodbye:
+- text: "Take care! Remember, prevention is better than cure."
+- text: "अपना ख्याल रखें। याद रखें, इलाज से बेहतर बचाव है।"
+utter_emergency:
+- text: EMERGENCY: Call 102 immediately or visit nearest hospital!"
+- text: आपातकालः तुरंत 102 पर कॉल करें या निकटतम अस्पताल जाएं।
+
+actions:
+  - action_get_disease_info
+  - action_check_symptoms
+  - action_vaccination_schedule
+  - action_set_language
