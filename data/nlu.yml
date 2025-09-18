@@ -1,0 +1,53 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - good morning
+    - good evening
+    - namaste
+    - नमस्ते
+    - हैलो
+
+- intent: ask_symptoms
+  examples: |
+    - I have fever
+    - मुझे बुखार है
+    - My head hurts
+    - मेरे पेट में दर्द है
+    - I feel dizzy
+    - चक्कर आ रहे हैं
+    - breathing problems
+    - सांस लेने में तकलीफ
+
+- intent: ask_vaccination
+  examples: |
+    - When should I get vaccine
+    - टीकाकरण कब कराना चाहिए
+    - vaccination schedule
+    - बच्चों के टीके कब लगवाएं
+    - COVID vaccine
+    - कोविड टीका
+
+- intent: ask_disease_info
+  examples: |
+    - What is [diabetes] (disease)?
+    - मधुमेह] (disease) क्या है?
+    - Tell me about [malaria] (disease)
+    - [मलेरिया] (disease) के बारे में बताएं
+    - How to prevent [dengue] (disease)?
+
+- intent: emergency
+  examples: |
+    - chest pain
+    - सीने में दर्द
+    - can't breathe
+    - सांस नहीं आ रही
+    - severe bleeding
+    - बहुत खून बह रहा है
+    - unconscious
+    - बेहोश हो गया
+

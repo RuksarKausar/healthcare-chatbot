@@ -1,0 +1,25 @@
+version: "3.1"
+
+stories:
+
+- story: basic greeting
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: symptom check flow
+  steps:
+  - intent: ask_symptoms
+  - action: action_check_symptoms
+  - intent: ask_disease_info
+  - action: action_get_disease_info
+
+- story: emergency response
+  steps:
+  - intent: emergency
+  - action: utter_emergency
+  
+- story: vaccination inquiry
+  steps:
+  - intent: ask_vaccination
+  - action: action_vaccination_schedule
